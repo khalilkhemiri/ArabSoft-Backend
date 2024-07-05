@@ -1,0 +1,16 @@
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\BasicAuthWithDbDemoApplication.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\controller\RegisterChefController.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\controller\RegisterUserController.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\entity\LoginCreds.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\service\RegistrationService.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\security\UnauthorizedEntrypoint.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\repository\RegisterNewUserRepository.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\controller\LoginController.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\security\JwtTokenProvider.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\security\SecurityConfig.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\service\UserDetail.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\controller\HomeController.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\security\DisableSecurityConfig.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\controller\RegisterAdminController.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\entity\UserProfile.java
+C:\Users\admin\OneDrive\Bureau\medium-basicAuth-with-UT-main\Stage-Backend\src\main\java\com\basicauth\app\enums\Role.java

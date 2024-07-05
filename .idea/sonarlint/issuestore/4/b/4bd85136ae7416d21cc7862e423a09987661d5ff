@@ -1,0 +1,23 @@
+
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¹ë¦Ë‡2
+_
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8¹ë¦Ë‡2
+_
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8¡¯ØĞ‡2
+w
+java:S3305#"UInject this field value directly into "filterSecurity", the only method that uses it.(Åøíıûÿÿÿÿ8¦¯ØĞ‡2
+z
+java:S3305"]Inject this field value directly into "authenticationProvider", the only method that uses it.(–êš½8ï²×Ğ‡2
+i
+java:S1612."LReplace this lambda with method reference 'AbstractHttpConfigurer::disable'.(­¿—°8Âë¦Ë‡2
+Y
+java:S16112"7Remove the parentheses around the "authorize" parameter(¬­Ùúÿÿÿÿ8Åë¦Ë‡2
+S
+java:S1611C"1Remove the parentheses around the "web" parameter(È±°‚øÿÿÿÿ8Èë¦Ë‡2
+s
+java:S1128"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥8ıÌ…’ˆ2
+ƒ
+java:S1128"aRemove this unused import 'org.springframework.security.provisioning.InMemoryUserDetailsManager'.(îŒúùÿÿÿÿ8ıÌ…’ˆ2
+;
+java:S1128"Remove this duplicated import.(ƒµ‹Š8‡ÆÚĞ‡2

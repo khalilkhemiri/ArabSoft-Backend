@@ -1,0 +1,15 @@
+
+Y
+java:S25898"7Remove this expression which always evaluates to "true"(Ö©Úóıÿÿÿÿ8—àÇ“ˆ2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8 àÇ“ˆ2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8£àÇ“ˆ2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¥àÇ“ˆ2
+_
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8¥àÇ“ˆ2
+`
+java:S1117T"CRename "passwordEncoder" which hides the field declared at line 31.(‡â÷‹8êàÇ“ˆ2
+Q
+java:S1905‰".Remove this unnecessary cast to "UserDetails".(Å’Øßøÿÿÿÿ8—áÇ“ˆ2

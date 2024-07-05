@@ -1,0 +1,11 @@
+com\basicauth\app\controller\RegisterAdminController.class
+com\basicauth\app\BasicAuthWithDbDemoApplication.class
+com\basicauth\app\controller\RegisterChefController.class
+com\basicauth\app\entity\LoginCreds.class
+com\basicauth\app\entity\UserProfile.class
+com\basicauth\app\controller\RegisterUserController.class
+com\basicauth\app\enums\Role.class
+com\basicauth\app\security\UnauthorizedEntrypoint.class
+com\basicauth\app\service\RegistrationService.class
+com\basicauth\app\controller\HomeController.class
+com\basicauth\app\repository\RegisterNewUserRepository.class
