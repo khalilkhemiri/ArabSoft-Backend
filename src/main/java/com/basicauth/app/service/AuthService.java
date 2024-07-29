@@ -155,4 +155,33 @@ public class AuthService {
         return ourUserRepo.save(user);
     }
 
+    public String assignPersonnelToChef(Long personnelId, Long chefId) {
+        Optional<UserProfile> personnelOpt = ourUserRepo.findById(personnelId);
+        Optional<UserProfile> chefOpt = ourUserRepo.findById(chefId);
+
+        if (personnelOpt.isPresent() && chefOpt.isPresent()) {
+            UserProfile personnel = personnelOpt.get();
+            UserProfile chef = chefOpt.get();
+
+            if (chef.getRole() == Role.CHEF) {
+                personnel.setRole(Role.PERSONNEL);
+                personnel.setChefHierarchique(chef);
+                ourUserRepo.save(personnel);
+                return "Personnel assigned to chef successfully.";
+            } else {
+                return "Selected user is not a CHEF.";
+            }
+        } else {
+            return "Personnel or Chef not found.";
+        }
+    }
+    public List<UserProfile> getAllByRole(Role role) {
+        return ourUserRepo.findByRole(role);
+    }
+
+
+
+    public List<UserProfile> getAllUsersWithChefs() {
+        return ourUserRepo.findAll();
+    }
 }

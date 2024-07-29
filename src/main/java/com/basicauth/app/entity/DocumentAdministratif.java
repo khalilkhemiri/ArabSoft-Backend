@@ -6,20 +6,22 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Data
-public class Pret {
+public class DocumentAdministratif {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Enumerated(EnumType.STRING)
-    private TypeDemande type;
-    private double montant;
+
     private LocalDate dateDemande;
+    private String motif;
+    private String typeDocument;
+
     @Enumerated(EnumType.STRING)
     private StatutDemande statut;
+    @Enumerated(EnumType.STRING)
+    private TypeDemande type;
     @ManyToOne
     @JoinColumn(name = "utilisateur_id")
     private UserProfile utilisateur;

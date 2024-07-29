@@ -1,9 +1,9 @@
 
-M
-java:S1128"7Remove this unused import 'jakarta.persistence.Entity'.(Ö≈ ∆
-U
-java:S1128"?Remove this unused import 'jakarta.persistence.GeneratedValue'.(ëå«å
-U
-java:S1128"?Remove this unused import 'jakarta.persistence.GenerationType'.(≤∫Î 
-I
-java:S1128"3Remove this unused import 'jakarta.persistence.Id'.(ö®Ù†
+T
+java:S1128"7Remove this unused import 'jakarta.persistence.Entity'.(Ö≈ ∆8¢Ö€Ωà2
+\
+java:S1128"?Remove this unused import 'jakarta.persistence.GeneratedValue'.(ëå«å8•Ö€Ωà2
+\
+java:S1128"?Remove this unused import 'jakarta.persistence.GenerationType'.(≤∫Î 8ßÖ€Ωà2
+P
+java:S1128"3Remove this unused import 'jakarta.persistence.Id'.(ö®Ù†8©Ö€Ωà2

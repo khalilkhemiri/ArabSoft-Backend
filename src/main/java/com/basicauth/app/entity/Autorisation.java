@@ -10,19 +10,20 @@ import java.util.Date;
 
 @Entity
 @Data
-public class Pret {
+public class Autorisation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private LocalDate dateDemande;
+    private String motif;
     @Enumerated(EnumType.STRING)
     private TypeDemande type;
-    private double montant;
-    private LocalDate dateDemande;
+    private Date dateDebut;
+    private Date dateFin;
     @Enumerated(EnumType.STRING)
     private StatutDemande statut;
+
     @ManyToOne
     @JoinColumn(name = "utilisateur_id")
     private UserProfile utilisateur;
-
-
 }

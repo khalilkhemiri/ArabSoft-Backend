@@ -12,5 +12,6 @@ public interface RegisterNewUserRepository extends JpaRepository<UserProfile,Lon
 
 	Optional<UserProfile> findByEmail(String email);
 	List<UserProfile> findByRole(Role role);
+	Optional<UserProfile> findById(Long id);
 
 }

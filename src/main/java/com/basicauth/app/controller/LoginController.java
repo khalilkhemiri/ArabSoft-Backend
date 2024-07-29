@@ -17,6 +17,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -49,4 +50,13 @@ public class LoginController {
     public UserProfile updateUserRole(@PathVariable Long userId, @RequestParam Role newRole) {
         return authService.updateUserRole(userId, newRole);
     }
+    @PostMapping("/assignPersonnelToChef")
+    public String assignPersonnelToChef(@RequestParam Long personnelId, @RequestParam Long chefId) {
+        return authService.assignPersonnelToChef(personnelId, chefId);
+    }
+    @GetMapping("/all")
+    public List<UserProfile> getAllUsersWithChefs() {
+        return authService.getAllUsersWithChefs();
+    }
+
 }

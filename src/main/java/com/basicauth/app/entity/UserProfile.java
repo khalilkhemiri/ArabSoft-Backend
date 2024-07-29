@@ -2,6 +2,8 @@ package com.basicauth.app.entity;
 
 import com.basicauth.app.enums.Role;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -36,15 +38,11 @@ public class UserProfile implements UserDetails {
     @JoinColumn(name = "chef_hierarchique_id")
     private UserProfile chefHierarchique;
 
-    @ManyToOne
-    @JoinColumn(name = "administrateur_id")
-    private UserProfile administrateur;
 
-    @OneToMany(mappedBy = "chefHierarchique")
-    private List<UserProfile> subordonnes;
 
-    @OneToMany(mappedBy = "administrateur")
-    private List<UserProfile> personnels;
+
+
+
 
 
 
