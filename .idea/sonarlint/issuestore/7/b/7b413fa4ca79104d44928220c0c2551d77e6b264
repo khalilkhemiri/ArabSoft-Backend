@@ -1,0 +1,8 @@
+
+	java:S116"^Rename this field "SituationRepository" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²œ©ıÿÿÿÿ8ø½ê“2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8õ¹€ê“2
+X
+java:S1128";Remove this unused import 'com.basicauth.app.entity.Conge'.(Õ½éÜ8«Ê¤â”2
+f
+java:S1128"IRemove this unused import 'com.basicauth.app.repository.CongeRepository'.(ÊŒ›´8­Ê¤â”2

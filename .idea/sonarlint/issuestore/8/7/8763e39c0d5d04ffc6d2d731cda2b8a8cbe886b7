@@ -1,0 +1,10 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÑ©Óşÿÿÿÿ8Çæ¹ê“2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¬µê“2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›÷¶ê“2
+]
+java:S1128";Remove this unused import 'com.basicauth.app.dto.CongeDTO'.(õˆ§øÿÿÿÿ8Üû®ë“2
+X
+java:S1128";Remove this unused import 'com.basicauth.app.entity.Conge'.(Õ½éÜ8İû®ë“2
