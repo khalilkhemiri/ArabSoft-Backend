@@ -30,6 +30,7 @@ public class UserProfile implements UserDetails {
 	private String Number;
 	private String token;
 	private boolean isOnline;
+	private String gender;
 
 	@Enumerated(EnumType.STRING)
 	private Role role;

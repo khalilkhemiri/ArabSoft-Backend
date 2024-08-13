@@ -22,9 +22,9 @@ public class DocumentAdministratif {
     private StatutDemande statut;
     @Enumerated(EnumType.STRING)
     private TypeDemande type;
+
     @ManyToOne
     @JoinColumn(name = "utilisateur_id")
     private UserProfile utilisateur;
-
 
 }

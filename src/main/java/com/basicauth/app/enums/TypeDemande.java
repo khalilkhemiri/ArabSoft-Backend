@@ -5,5 +5,6 @@ public enum TypeDemande {
     AUTORISATION,
     PRET,
     AVANCE,
-  DocumentAdministratif
+  DocumentAdministratif,
+  ChangementSituation
 }

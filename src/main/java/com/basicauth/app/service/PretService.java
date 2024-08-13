@@ -1,5 +1,6 @@
 package com.basicauth.app.service;
 
+import com.basicauth.app.entity.Conge;
 import com.basicauth.app.entity.Pret;
 import com.basicauth.app.repository.PretRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +17,8 @@ public class PretService {
         return pretRepository.save(pret);
     }
 
+    public Pret save(Pret pret) {
+        return pretRepository.save(pret);
+    }
 
 }

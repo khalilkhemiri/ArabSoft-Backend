@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="attestationArabsoft" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="edf6dbd7-bc94-463e-bfbf-a13af170bf07">
+
+    <field name="name" class="java.lang.String">
+
+    </field>
+    <field name="role" class="java.lang.String">
+
+    </field>
+    <field name="gender" class="java.lang.String">
+
+    </field>
+    <field name="email" class="java.lang.String">
+
+    </field>
+    <field name="number" class="java.lang.String">
+
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="139" y="10" width="300" height="30" uuid="cd956f87-7817-487c-a6e7-1c059f2ddea7"/>
+                <textElement textAlignment="Center">
+                    <font size="22" isBold="true" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[ATTESTATION DE TRAVAIL
+]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="194" splitType="Stretch">
+            <staticText>
+                <reportElement x="-10" y="10" width="591" height="154" uuid="86d2c672-42c5-4f4a-8946-bee5bf134b60"/>
+                <textElement textAlignment="Left">
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[Je/Nous soussigné (es) Mohamed Tounsi Gérant de la société RDH,
+atteste/attestons par la présente que Mr                             titulaire de la CIN
+N°555555, a été salarié (e) au sein de notre société du 01/01/2010 au
+31/12/2012 (ou est salarié au sein de la société du 01/01/2012 à ce jour).
+Cette attestation est délivrée à l’intéressé (e) pour servir et valoir ce que de
+droit]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="280" y="30" width="120" height="20" uuid="b7fbd899-d3d2-4f32-8623-7a4d6ba5eb23"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="143" splitType="Stretch">
+            <staticText>
+                <reportElement x="-1" y="11" width="131" height="28" uuid="320339e3-8233-4280-ad87-ae52db88d5af"/>
+                <textElement>
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[Fait à Tunis le]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="-1" y="46" width="331" height="60" uuid="1d55b850-74eb-45c4-9f10-ca69f80e777f"/>
+                <textElement>
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[Prénom et nom de l’intermédiaire
+Signature et cachet]]></text>
+            </staticText>
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="130" y="10" width="100" height="30" uuid="38c2a93b-011b-4b14-ba70-e0534c7bf6e1"/>
+                <textElement>
+                    <font size="16"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

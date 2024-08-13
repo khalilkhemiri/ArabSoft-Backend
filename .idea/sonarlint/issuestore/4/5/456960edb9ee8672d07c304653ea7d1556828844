@@ -1,27 +1,38 @@
 
+r
+java:S1192Y"PDefine a constant instead of duplicating this literal "User not found." 3 times.(•½Ôùÿÿÿÿ8ÇôÂÃ“2
 Y
-java:S25898"7Remove this expression which always evaluates to "true"(Ö©Úóıÿÿÿÿ8á¸Áä2
+java:S2589E"7Remove this expression which always evaluates to "true"(Ö©Úóıÿÿÿÿ8àÜµÅ“2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¯ÜÚ½ˆ2
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8ÛôÂÃ“2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¯ÜÚ½ˆ2
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8ÛôÂÃ“2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8°ÜÚ½ˆ2
+java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÜôÂÃ“2
 _
-java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8°ÜÚ½ˆ2
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÜôÂÃ“2
+_
+java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8¹¢Œå“2
 `
-java:S1117T"CRename "passwordEncoder" which hides the field declared at line 31.(‡â÷‹8êàÇ“ˆ2
+java:S1117a"CRename "passwordEncoder" which hides the field declared at line 36.(‡â÷‹8ëôÂÃ“2
 Q
-java:S1905‰".Remove this unnecessary cast to "UserDetails".(Å’Øßøÿÿÿÿ8§ºÁä2
+java:S1905·".Remove this unnecessary cast to "UserDetails".(Å’Øßøÿÿÿÿ8€İµÅ“2
+›
+java:S1130¥"xRemove the declaration of thrown exception 'jakarta.mail.MessagingException', as it cannot be thrown from method's body.(óÄÚùûÿÿÿÿ8üñ¡å“2
+[
+java:S1128">Remove this unused import 'jakarta.mail.internet.MimeMessage'.(š‹ÔÕ8íõ¢å“2
 b
-java:S1128"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8÷ºÁä2
+java:S1128
+"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8íõ¢å“2
 f
-java:S1128	"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8øºÁä2
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8îõ¢å“2
 ‚
-java:S1128"`Remove this unused import 'org.springframework.security.authentication.BadCredentialsException'.(Òòîƒÿÿÿÿÿ8ùºÁä2
+java:S1128"`Remove this unused import 'org.springframework.security.authentication.BadCredentialsException'.(Òòîƒÿÿÿÿÿ8îõ¢å“2
 
-java:S1128"lRemove this unused import 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken'.(ÖÆ„Ùüÿÿÿÿ8úºÁä2
+java:S1128"lRemove this unused import 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken'.(ÖÆ„Ùüÿÿÿÿ8îõ¢å“2
 j
-java:S1128"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñıÓ“8ûºÁä2
+java:S1128"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñıÓ“8îõ¢å“2
 y
-java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8üºÁä2
+java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8ïõ¢å“2
+;
+java:S1128"Remove this duplicated import.(ÕÃ›8Û¥å“2

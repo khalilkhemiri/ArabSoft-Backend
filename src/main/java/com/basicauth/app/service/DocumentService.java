@@ -21,4 +21,7 @@ public class DocumentService {
         doc.setStatut(StatutDemande.EN_ATTENTE);
         return documentRepo.save(doc);
     }
+    public DocumentAdministratif save(DocumentAdministratif document) {
+        return documentRepo.save(document);
+    }
 }

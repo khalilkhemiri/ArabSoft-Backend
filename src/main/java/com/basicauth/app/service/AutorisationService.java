@@ -21,4 +21,7 @@ public class AutorisationService {
         autorisation.setType(TypeDemande.AUTORISATION);
         return autorepo.save(autorisation);
     }
+    public Autorisation save(Autorisation autorisation) {
+        return autorepo.save(autorisation);
+    }
 }

@@ -1,6 +1,7 @@
 package com.basicauth.app.service;
 
 
+import com.basicauth.app.entity.Autorisation;
 import com.basicauth.app.entity.Conge;
 import com.basicauth.app.enums.StatutDemande;
 import com.basicauth.app.enums.TypeDemande;
@@ -20,6 +21,9 @@ public class CongeService {
         conge.setDateDemande(LocalDate.now());
         conge.setType(TypeDemande.CONGE);
         conge.setStatut(StatutDemande.EN_ATTENTE);
+        return congeRepository.save(conge);
+    }
+    public Conge save(Conge conge) {
         return congeRepository.save(conge);
     }
 

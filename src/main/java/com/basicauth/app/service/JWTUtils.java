@@ -2,6 +2,7 @@ package com.basicauth.app.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import jakarta.annotation.PostConstruct;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
 import org.springframework.stereotype.Component;
@@ -9,17 +10,21 @@ import org.springframework.stereotype.Component;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 
 @Component
 public class JWTUtils {
 
     private SecretKey Key;
-    private  static  final long EXPIRATION_TIME = 86400000; //24hours or 86400000 milisecs
+    private  static  final long EXPIRATION_TIME = 86400000;
+    private Set<String> blacklistedTokens;
+
+    @PostConstruct
+    public void init() {
+        blacklistedTokens = new HashSet<>();
+    }
+
     public JWTUtils(){
         String secreteString = "843567893696976453275974432697R634976R738467TR678T34865R6834R8763T478378637664538745673865783678548735687R3";
         byte[] keyBytes = Base64.getDecoder().decode(secreteString.getBytes(StandardCharsets.UTF_8));
@@ -53,12 +58,18 @@ public class JWTUtils {
 
     public boolean isTokenValid(String token, UserDetails userDetails){
         final String username = extractUsername(token);
-        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token) && !isTokenBlacklisted(token));
     }
     public boolean isTokenExpired(String token){
         return extractClaims(token, Claims::getExpiration).before(new Date());
     }
 
+    public void invalidateToken(String token) {
+        blacklistedTokens.add(token);
+    }
 
+    private boolean isTokenBlacklisted(String token) {
+        return blacklistedTokens.contains(token);
+    }
 
 }
