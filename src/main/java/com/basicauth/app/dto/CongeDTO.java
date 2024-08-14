@@ -18,7 +18,7 @@ public class CongeDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate dateFin;
     private String motif;
-    private String statut; // Convert Enum to String
-    private String type;   // Convert Enum to String
-    private Long utilisateurId; // ID of the user
+    private String statut;
+    private String type;
+    private Long utilisateurId;
 }

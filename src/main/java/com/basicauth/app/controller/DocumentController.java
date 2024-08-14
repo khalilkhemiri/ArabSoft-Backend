@@ -35,7 +35,6 @@ private RegisterNewUserRepository userProfileRepository;
 
     @PostMapping("/demande")
     public ResponseEntity<Map<String, String>> createDocument(@RequestBody DocumentAdministratifDTO documentDTO) {
-        // Convert DTO to entity
         DocumentAdministratif document = new DocumentAdministratif();
         document.setDateDemande(LocalDate.now());
         document.setMotif(documentDTO.getMotif());
@@ -43,15 +42,12 @@ private RegisterNewUserRepository userProfileRepository;
         document.setStatut(StatutDemande.EN_ATTENTE);
         document.setType(TypeDemande.DocumentAdministratif);
 
-        // Fetch the UserProfile by ID
         UserProfile utilisateur = userProfileRepository.findById(documentDTO.getUtilisateurId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         document.setUtilisateur(utilisateur);
 
-        // Save the document entity
         documentService.save(document);
 
-        // Return a JSON response
         Map<String, String> response = new HashMap<>();
         response.put("message", "Demande de document administratif envoyée avec succès!");
         return ResponseEntity.ok(response);

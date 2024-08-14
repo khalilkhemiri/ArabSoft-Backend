@@ -24,7 +24,6 @@ public class AutorisationController {
 
     @PostMapping("/demande")
     public ResponseEntity<?> createAutorisation(@RequestBody AutorisationDTO autorisationDTO) {
-        // Convert DTO to entity
         Autorisation autorisation = new Autorisation();
         autorisation.setDateDemande(LocalDate.now());
         autorisation.setMotif(autorisationDTO.getMotif());
@@ -33,12 +32,10 @@ public class AutorisationController {
         autorisation.setDateFin(autorisationDTO.getDateFin());
         autorisation.setStatut(StatutDemande.EN_ATTENTE);
 
-        // Fetch the UserProfile by ID
         UserProfile utilisateur = userProfileRep.findById(autorisationDTO.getUtilisateurId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         autorisation.setUtilisateur(utilisateur);
 
-        // Save the autorisation entity
         autorisationService.save(autorisation);
 
         return ResponseEntity.ok("Demande envoyée avec succès!");

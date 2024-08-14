@@ -31,7 +31,6 @@ public class CongeController {
     }
     @PostMapping("/demande")
     public ResponseEntity<Map<String, String>> createConge(@RequestBody CongeDTO congeDTO) {
-        // Convert DTO to entity
         Conge conge = new Conge();
         conge.setDateDemande(LocalDate.now());
         conge.setDateDebut(congeDTO.getDateDebut());
@@ -40,12 +39,10 @@ public class CongeController {
         conge.setStatut(StatutDemande.EN_ATTENTE);
         conge.setType(TypeDemande.CONGE);
 
-        // Fetch the UserProfile by ID
         UserProfile utilisateur = repoUser.findById(congeDTO.getUtilisateurId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         conge.setUtilisateur(utilisateur);
 
-        // Save the conge entity
         congeService.save(conge);
 
         Map<String, String> response = new HashMap<>();

@@ -29,19 +29,16 @@ public class ChangementSituationController {
 
     @PostMapping("/demande")
     public ResponseEntity<Map<String, String>> createConge(@RequestBody ChangementSituationDTO ChangementSituationDTO) {
-        // Convert DTO to entity
         ChangementSituation conge = new ChangementSituation();
         conge.setDateDemande(LocalDate.now());
         conge.setNouvelleSituation(ChangementSituationDTO.getNouvelleSituation());
         conge.setStatut(StatutDemande.EN_ATTENTE);
         conge.setType(TypeDemande.ChangementSituation);
 
-        // Fetch the UserProfile by ID
         UserProfile utilisateur = repoUser.findById(ChangementSituationDTO.getUtilisateurId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         conge.setUtilisateur(utilisateur);
 
-        // Save the conge entity
         situation.save(conge);
 
         Map<String, String> response = new HashMap<>();

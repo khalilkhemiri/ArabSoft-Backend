@@ -134,7 +134,6 @@ public class AllDemand {
         int currentYear = LocalDate.now().getYear();
         Map<String, Long> demandesParMois = new HashMap<>();
 
-        // Utilisez l'instance de l'enum au lieu de la chaîne
         StatutDemande statutApprouve = StatutDemande.APPROUVEE;
 
         for (Month month : Month.values()) {

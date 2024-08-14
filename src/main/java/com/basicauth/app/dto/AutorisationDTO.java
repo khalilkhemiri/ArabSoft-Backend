@@ -20,5 +20,4 @@ public class AutorisationDTO {
     private String statut;
     private Long utilisateurId;
 
-    // Getters and Setters
 }

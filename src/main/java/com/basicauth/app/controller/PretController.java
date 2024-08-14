@@ -28,19 +28,16 @@ public class PretController {
     }
     @PostMapping
     public ResponseEntity<?> createPret(@RequestBody PretDTO pretDTO) {
-        // Convert DTO to entity
         Pret pret = new Pret();
         pret.setType(TypeDemande.valueOf(pretDTO.getType()));
         pret.setMontant(pretDTO.getMontant());
         pret.setDateDemande(LocalDate.now());
         pret.setStatut(StatutDemande.EN_ATTENTE);
 
-        // Fetch the UserProfile by ID
         UserProfile utilisateur = repoUser.findById(pretDTO.getUtilisateurId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         pret.setUtilisateur(utilisateur);
 
-        // Save the pret entity
         pretService.save(pret);
 
         return ResponseEntity.ok("Demande de prêt envoyée avec succès!");

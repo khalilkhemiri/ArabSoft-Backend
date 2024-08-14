@@ -51,8 +51,7 @@ public class AuthService {
         try {
 
             if (ourUserRepo.findByEmail(registrationRequest.getEmail()).isPresent()) {
-                // Si un utilisateur avec cet email existe déjà, afficher un message d'erreur
-                resp.setStatusCode(400); // Bad Request
+                resp.setStatusCode(400);
                 resp.setMessage("Email already exists");
                 return resp;
             }
@@ -62,7 +61,7 @@ public class AuthService {
             users.setName(registrationRequest.getName());
             users.setNumber(registrationRequest.getNumber());
             users.setPassword(passwordEncoder.encode(registrationRequest.getPassword()));
-            users.setRole(Role.EMPLOYE); // Explicitly set role to null
+            users.setRole(Role.EMPLOYE);
 
 
             UserProfile ourUserResult = ourUserRepo.save(users);
@@ -82,7 +81,6 @@ public class AuthService {
         ReqRes response = new ReqRes();
 
         try {
-            // Retrieve user by email
             var userOptional = ourUserRepo.findByEmail(signinRequest.getEmail());
             if (userOptional.isEmpty()) {
                 response.setStatusCode(404);
@@ -93,36 +91,29 @@ public class AuthService {
             var user = userOptional.get();
             String storedPassword = user.getPassword();
 
-            // Check if the stored password is encoded (BCrypt format starts with $2a$)
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             boolean isPasswordEncoded = storedPassword.startsWith("$2a$");
 
-            // Authenticate the user
             if (isPasswordEncoded) {
-                // Use BCrypt to match the password
                 if (!passwordEncoder.matches(signinRequest.getPassword(), storedPassword)) {
-                    response.setStatusCode(401); // Unauthorized
+                    response.setStatusCode(401);
                     response.setMessage("Invalid email or password.");
                     return response;
                 }
             } else {
-                // Handle plain text password authentication
                 if (!storedPassword.equals(signinRequest.getPassword())) {
-                    response.setStatusCode(401); // Unauthorized
+                    response.setStatusCode(401);
                     response.setMessage("Invalid email or password.");
                     return response;
                 }
 
-                // Encode the plain text password and update the user's password in the database
                 user.setPassword(passwordEncoder.encode(signinRequest.getPassword()));
                 ourUserRepo.save(user);
             }
 
-            // Generate JWT tokens
             var jwt = jwtUtils.generateToken(user);
             var refreshToken = jwtUtils.generateRefreshToken(new HashMap<>(), user);
 
-            // Prepare the response
             response.setStatusCode(200);
             response.setToken(jwt);
             response.setRefreshToken(refreshToken);
@@ -130,7 +121,6 @@ public class AuthService {
             response.setMessage("Successfully Signed In");
             response.setUsers(user);
 
-            // Update user's online status
             user.setOnline(true);
             ourUserRepo.save(user);
 
@@ -146,7 +136,6 @@ public class AuthService {
         ReqRes response = new ReqRes();
 
         try {
-            // Retrieve user by ID
             var userOptional = ourUserRepo.findById(userId);
             if (userOptional.isEmpty()) {
                 response.setStatusCode(404);
@@ -156,13 +145,10 @@ public class AuthService {
 
             var user = userOptional.get();
 
-            // Invalidate JWT tokens
-            jwtUtils.invalidateToken(user.getToken()); // Assurez-vous que le token est accessible
+            jwtUtils.invalidateToken(user.getToken());
 
-            // Update user's online status
             user.setOnline(false);
             ourUserRepo.save(user);
-            // Prepare the response
             response.setStatusCode(200);
             response.setMessage("Successfully Signed Out");
 
@@ -228,11 +214,9 @@ public class AuthService {
         if (personnelOpt.isPresent()) {
             UserProfile personnel = personnelOpt.get();
 
-            // Vérifier si le personnel a un chef hiérarchique
             if (personnel.getChefHierarchique() != null) {
-                // Réinitialiser le chef hiérarchique et le rôle
                 personnel.setChefHierarchique(null);
-                personnel.setRole(Role.EMPLOYE); // ou ce que vous souhaitez pour le rôle après la désaffectation
+                personnel.setRole(Role.EMPLOYE);
 
                 ourUserRepo.save(personnel);
                 return "Personnel has been successfully unassigned from the chef.";
@@ -257,18 +241,15 @@ public class AuthService {
     public ReqRes deleteUserById(Long userId) {
         ReqRes resp = new ReqRes();
         try {
-            // Vérifier si l'utilisateur existe
             var userOptional = ourUserRepo.findById(userId);
             if (userOptional.isEmpty()) {
-                resp.setStatusCode(404); // Not Found
+                resp.setStatusCode(404);
                 resp.setMessage("User not found.");
                 return resp;
             }
 
-            // Supprimer l'utilisateur
             ourUserRepo.deleteById(userId);
 
-            // Préparer la réponse
             resp.setStatusCode(200);
             resp.setMessage("User deleted successfully.");
         } catch (Exception e) {
