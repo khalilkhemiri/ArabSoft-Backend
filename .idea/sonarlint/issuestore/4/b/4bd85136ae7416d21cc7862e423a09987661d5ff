@@ -5,10 +5,10 @@ _
 java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄÞ8¹ë¦Ë‡2
 _
 java:S6813""BRemove this field injection and use constructor injection instead.(êæÄÞ8¡¯ØÐ‡2
-w
-java:S3305#"UInject this field value directly into "filterSecurity", the only method that uses it.(Åøíýûÿÿÿÿ8¦¯ØÐ‡2
 z
 java:S3305"]Inject this field value directly into "authenticationProvider", the only method that uses it.(–êš½8ï²×Ð‡2
+w
+java:S3305#"UInject this field value directly into "filterSecurity", the only method that uses it.(Åøíýûÿÿÿÿ8¦¯ØÐ‡2
 i
 java:S1612."LReplace this lambda with method reference 'AbstractHttpConfigurer::disable'.(­¿—°8Âë¦Ë‡2
 Y

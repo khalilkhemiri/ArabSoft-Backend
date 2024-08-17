@@ -1,9 +1,9 @@
 
 j
-java:S11928"HDefine a constant instead of duplicating this literal "message" 3 times.(é’–úÿÿÿÿ8²æƒ‘”2
+java:S11927"HDefine a constant instead of duplicating this literal "message" 3 times.(é’–úÿÿÿÿ8²æƒ‘”2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÁßÖ½2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÁßÖ½2
 C
-java:S1452F"&Remove usage of generic wildcard type.(æ±¸8‰„‘”2
+java:S1452E"&Remove usage of generic wildcard type.(æ±¸8‰„‘”2
 C
-java:S1452P"&Remove usage of generic wildcard type.(Œ†Í8ª™…‘”2
+java:S1452O"&Remove usage of generic wildcard type.(Œ†Í8ª™…‘”2

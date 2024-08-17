@@ -111,3 +111,6 @@ Gsrc/main/java/com/basicauth/app/repository/ChangementSituationRepo.java,d\c\dc
 Msrc/main/java/com/basicauth/app/controller/ChangementSituationController.java,8\7\8763e39c0d5d04ffc6d2d731cda2b8a8cbe886b7
 o
 ?src/main/java/com/basicauth/app/dto/ChangementSituationDTO.java,9\8\98db403351c57c8f934468e083b5b6a579fc7991
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
