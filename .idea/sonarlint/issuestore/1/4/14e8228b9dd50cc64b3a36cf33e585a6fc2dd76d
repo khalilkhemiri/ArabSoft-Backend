@@ -1,21 +1,21 @@
 
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8äç›ì’2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8…şÚ–2
 _
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8åç›ì’2
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8†şÚ–2
 C
-java:S1452`"&Remove usage of generic wildcard type.(üª˜ú8–õüÃ“2
+java:S1452`"&Remove usage of generic wildcard type.(üª˜ú8µşÚ–2
 ]
-java:S1128"@Remove this unused import 'com.basicauth.app.entity.LoginCreds'.(Áû‡±8õüÃ“2
+java:S1128"@Remove this unused import 'com.basicauth.app.entity.LoginCreds'.(Áû‡±8¸şÚ–2
 €
-java:S1128"^Remove this unused import 'org.springframework.security.authentication.AuthenticationManager'.(ğş–şÿÿÿÿ8õüÃ“2
+java:S1128"^Remove this unused import 'org.springframework.security.authentication.AuthenticationManager'.(ğş–şÿÿÿÿ8¸şÚ–2
 ‚
-java:S1128"`Remove this unused import 'org.springframework.security.authentication.BadCredentialsException'.(Òòîƒÿÿÿÿÿ8 õüÃ“2
+java:S1128"`Remove this unused import 'org.springframework.security.authentication.BadCredentialsException'.(Òòîƒÿÿÿÿÿ8¹şÚ–2
 
-java:S1128"lRemove this unused import 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken'.(ÖÆ„Ùüÿÿÿÿ8¡õüÃ“2
+java:S1128"lRemove this unused import 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken'.(ÖÆ„Ùüÿÿÿÿ8¹şÚ–2
 j
-java:S1128"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñıÓ“8£õüÃ“2
+java:S1128"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñıÓ“8¹şÚ–2
 y
-java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8£õüÃ“2
+java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8¹şÚ–2
 Q
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8¤õüÃ“2
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ºşÚ–2

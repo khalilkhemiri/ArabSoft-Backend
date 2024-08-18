@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://angular-container")
+@CrossOrigin(origins = "*")
 public class LoginController {
 
 
