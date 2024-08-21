@@ -56,6 +56,6 @@ jobs:
     - name: Push Docker image to DockerHub
       run: |
         echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-        docker tag backend-app your-dockerhub-username/backend-app
-        docker push your-dockerhub-username/backend-app
+        docker tag backend-app khalilkh/backend-app
+        docker push khalilkh/backend-app
 
